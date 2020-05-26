@@ -486,7 +486,10 @@ void HWDeviceDRM::InitializeConfigs() {
       }
   }
 
+  DLOGI("display_attributes_.size(): %d", display_attributes_.size());
+  DLOGI("connector_info_.modes.size(): %d", connector_info_.modes.size());
   display_attributes_.resize(connector_info_.modes.size());
+  DLOGI("Fine after display_attributes resize.");
 
   uint32_t width = connector_info_.modes[current_mode_index_].mode.hdisplay;
   uint32_t height = connector_info_.modes[current_mode_index_].mode.vdisplay;
